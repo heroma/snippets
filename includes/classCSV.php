@@ -15,16 +15,16 @@ class CSV{
 		$fp = fopen($csv, 'w');
 
 		// Liña de cabeceira
-		$linea = explode(";", trim($arr[0]));
+		$linea = explode(",", trim($arr[0]));
 		// Engadir columnas ao CSV a continuación:
 		$this -> procesaCabeceira($fp, $linea);
 		
 		// Resto do CSV
 		$size = count($arr);
 		for($i=1; $i < $size; $i++){
-			if (trim(str_replace(";", "", $arr[$i])) != ""){
+			if (trim(str_replace(",", "", $arr[$i])) != ""){
 				// Liña non baleira
-				$this -> procesaLinea($fp, explode(";", trim($arr[$i])));
+				$this -> procesaLinea($fp, explode(",", trim($arr[$i])));
 			} 
 		}
 		fclose($fp);
