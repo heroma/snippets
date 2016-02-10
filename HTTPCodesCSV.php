@@ -16,7 +16,7 @@ class HTTPCodesCSV extends CSV{
 		$code  = "ERRO";
 		try{
 			// Ler URL da liña do CSV
-			$url 	= trim($lineaCSV[0]);
+			$url 	= trim($lineaCSV[1]);
 			$param 	= array("url" => $url);
 
 			// Abrir URL 
