@@ -7,7 +7,7 @@ class HTTPCodesCSV extends CSV{
 	public function procesaCabeceira($csv, $lineaCSV){
 		// Engadir columnas
 		array_push($lineaCSV, date("Ymd"));
-		fputcsv($csv, $lineaCSV, ";");
+		fputcsv($csv, $lineaCSV, ",");
 	}
 
 
@@ -38,7 +38,7 @@ class HTTPCodesCSV extends CSV{
 		array_push($lineaCSV, $code);	
 
 		//fputcsv — Dar formato CSV a una línea y escribirla en un puntero a un fichero
-		fputcsv($csv, $lineaCSV, ";");
+		fputcsv($csv, $lineaCSV, ",");
 	}
 }
 
